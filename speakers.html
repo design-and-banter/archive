@@ -1,0 +1,36 @@
+---
+title: Design+Banter
+---
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,700,900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% link style.css %}">
+
+	</head>
+	<body>
+		<h1>Design+Banter </h1>
+		<p>Design+Banter was a community of designers, connected by a series of events that took place between 2013 and 2015 in London. Each month it brought together hundreds of designers of all stripes to hear talks, share food and drinks.</p>
+		
+		<h2>All the speakers ever</h2>
+		
+		<ol>
+			{% for event in site.data.events  %}
+				
+				<li>
+					{{event.speaker_1_fname}}	{{event.speaker_1_lname}}  <br/>  {{event.speaker_1_title}}, {{event.speaker_1_company}}
+				</li>
+				<li>
+					{{event.speaker_2_fname}}	{{event.speaker_2_lname}}  <br/>  {{event.speaker_2_title}}, {{event.speaker_2_company}}
+				</li>
+				<li>
+					{{event.speaker_3_fname}}	{{event.speaker_3_lname}}  <br/>  {{event.speaker_3_title}}, {{event.speaker_3_company}}
+				</li>
+			
+			{% endfor %}
+		</ol>
+		<footer>
+			We've made an effort to make sure everything on this site
+		</footer>
+		
+	</body>
+</html>
